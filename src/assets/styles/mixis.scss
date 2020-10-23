@@ -1,0 +1,9 @@
+%scroll {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }      
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--text-header-table);
+    border-radius: 20px;
+  }
+}

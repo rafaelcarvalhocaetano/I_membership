@@ -1,0 +1,19 @@
+.tbl-body {
+  .data {
+    min-width: 180px;
+    padding: 15px 0;
+  }
+  .profits {
+    color: var(--primary);
+  }
+  .losses {
+    color: var(--text-red);
+  }
+  &:nth-child(even){
+    background-color: var(--line-table);
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: var(--line-table);
+  }
+}

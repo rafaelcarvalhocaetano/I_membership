@@ -1,0 +1,38 @@
+%title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--text-table);
+}
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  .btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+  .center {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    p {
+      width: 35px;
+      height: 35px;
+      background: var(--line-table);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @extend %title;
+    }
+    span {
+      @extend %title;
+      margin: 0 10px;
+    }
+  }
+}
