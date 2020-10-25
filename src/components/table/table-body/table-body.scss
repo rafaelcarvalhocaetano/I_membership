@@ -2,6 +2,10 @@
   .data {
     min-width: 180px;
     padding: 15px 0;
+    position: relative;
+    .btn-delete {
+      display: none;
+    }
   }
   .profits {
     color: var(--primary);
@@ -15,5 +19,22 @@
   &:hover {
     cursor: pointer;
     background-color: var(--line-table);
+    .data > .btn-delete {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      display: flex;
+      align-items: center;
+      border: none;
+      background-color: var(--primary);
+      color: var(--default);
+      font-weight: bold;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      &:focus {
+        outline: none;
+      }
+    }
   }
 }

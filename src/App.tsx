@@ -8,31 +8,34 @@ import Overview from './pages/Overview';
 import Cloud from './pages/Cloud';
 import Header from './components/header/header';
 import Modal from './components/modal/Modal';
+import UserProvider from './context/UseContext';
 
 const App = () => {
 
   const [model, setModel] = useState<boolean>();
   
-  const dataModal = (data: boolean) => {
-    setModel(data);
-  }
+  const dataModal = (data: boolean) => setModel(data);
 
   return (
-    <div className="container-router">
-      <Router>
-        <Routers />
-        <div className="router-pages">
-          <Header toggle={dataModal} />
-          <Switch>
-            <Route path='/' exact component={Overview} />
-            <Route path='/cloud' component={Cloud} />
-          </Switch>
-        </div>
-      </Router>
-      {
-        model ? <Modal toggle={dataModal} /> : null 
-      }
-    </div>
+    <UserProvider>
+      <div className="container-router">
+        <Router>
+          <div className="navbar">
+            <Routers />
+          </div>
+          <div className="router-pages">
+            <Header toggle={dataModal} />
+            <Switch>
+              <Route path='/' exact component={Overview} />
+              <Route path='/cloud' component={Cloud} />
+            </Switch>
+          </div>
+        </Router>
+        {
+          model ? <Modal toggle={dataModal} /> : null 
+        }
+      </div>
+    </UserProvider>
   );
 }
 

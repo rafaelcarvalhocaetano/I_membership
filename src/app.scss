@@ -1,7 +1,27 @@
 .container-router {
   display: flex;
-  .router-pages {
-    width: 100%;
-    padding: 55px 62px 0 62px;
+  height: 100vh;
+  width: 100%;
+  .navbar {
+    height: 100vh;
+    width: 300px;
   }
+  .router-pages {
+    padding: 30px;
+    width: calc(100% - 300px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .container-router {
+    height: 100vh;
+    .navbar {
+      width: 80px;
+    }
+    .router-pages {
+      padding: 0;
+      width: calc(100% - 80px);
+    }
+  }
+  
 }

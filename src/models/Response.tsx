@@ -8,10 +8,10 @@ export interface User {
 }
 
 export interface IResponse {
-  next: Page;
+  next?: Page;
   previous?: Page;
   peyloader: User[],
-  total_page: number;
+  total_page: number | any;
 }
 interface Page {
   page: number;

@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import InputControll from '../input-controll/InputControll';
 
 import './model.scss';
 
 import close from '../../assets/icons/close_model.svg';
-import UserService from '../../service/UserService';
+import { IUserContext } from '../../context/IUseContext';
+import { UseContext } from '../../context/UseContext';
 
 const Modal = ({toggle}: any) => {
 
-  const service = new UserService();
+  const { createUser } = useContext<IUserContext>(UseContext);
 
   const [form, setForm] = useState<any>({
     url_img:  null,
@@ -18,18 +19,16 @@ const Modal = ({toggle}: any) => {
     losses: null,
   })
 
-
-  const createUser = () => {
-    service.api.post('/user', form).then((_: any) => toggle(false))
-  }
-
   const requestValidator = () => {
     if (form.url_img && form.user_name && form.end_date && form.profits && form.losses) {
       if (validatorUrl(form.url_img)) {
-        createUser();
+        try {
+          createUser(form);
+          toggle(false);
+        } catch {
+          throw new Error("DEU Muito Ruim");
+        }
       }
-    } else {
-      alert('Formulário inválido');
     }
   }
 

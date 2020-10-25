@@ -23,7 +23,7 @@
   align-items: center;
   z-index: 1;
   .create-user {
-    width: 30%;
+    width: 80%;
     padding: 20px;
     background-color: var(--default);
     border-radius: 5px;
@@ -69,6 +69,27 @@
       color: var(--default);
       text-align: center;
       align-self: flex-end;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-container {
+    .create-user {
+      // .header-form {
+      //   h3 {
+         
+      //   }
+      //   .btn-close {
+        
+      //   }
+      // }
+      .container-values {
+        flex-direction: column;
+      }
+      // .btn-add {
+        
+      // }
     }
   }
 }
