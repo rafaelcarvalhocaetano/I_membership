@@ -5,5 +5,5 @@
 ## URL
  - https://i-membership.herokuapp.com/
  
- 
-## BackEnd NodeTS
+## Back-end
+ - https://github.com/rafaelcarvalhocaetano/i-membership-backend
