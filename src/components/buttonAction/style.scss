@@ -1,0 +1,14 @@
+@import '../../assets/styles/places';
+
+.btn-action {
+  height: 40px;
+  background-color: var(--ebtn-grey);
+  border-radius: 5px;
+  padding: 0 20px;
+  span {
+    color: var(--default);
+    font-weight: 600;
+    font-size: 14px;
+  }
+  @extend %colors;
+}

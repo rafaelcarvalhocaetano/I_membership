@@ -8,7 +8,6 @@ import { IResponse } from "../models/Response";
 const service = new UserService();
 
 
-
 export const UseContext = createContext<IUserContext>({
   users: {},
   createUser: (form: User) => {},

@@ -12,6 +12,21 @@
   }
 }
 
+.btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    transform: scale(1);
+  }
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
 @media (max-width: 1024px) {
   .container-router {
     height: 100vh;

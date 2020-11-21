@@ -1,0 +1,34 @@
+@import '../../assets/styles/places';
+
+.btn-icon-event {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  @extend %colors;
+  position: relative;
+  margin: 5px;
+  .mf {
+    color: var(--ecard);
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+  }
+  &::before {
+    content: '';
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 400ms ease-in-out 0s;
+  }
+  
+  &.border-effect {
+   @extend %color-checked;
+  }
+}

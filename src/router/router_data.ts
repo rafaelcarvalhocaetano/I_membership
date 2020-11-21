@@ -15,9 +15,9 @@ export const routers = [
     name: 'Overview'
   },
   {
-    path: '/cloud',
+    path: '/event',
     icon: cloud,
-    name: 'Clound'
+    name: 'Event'
   },
   {
     path: '/sketch',

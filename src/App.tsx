@@ -8,7 +8,8 @@ import Header from './components/header/header';
 import Modal from './components/modal/Modal';
 import UserProvider from './context/UseContext';
 import Overview from './pages/overview';
-import Cloud from './pages/clould';
+import Event from './pages/event';
+// import Cloud from './pages/clould';
 
 const App = () => {
 
@@ -27,7 +28,7 @@ const App = () => {
             <Header toggle={dataModal} />
             <Switch>
               <Route path='/' exact component={Overview} />
-              <Route path='/cloud' component={Cloud} />
+              <Route path='/event' component={Event} />
             </Switch>
           </div>
         </Router>

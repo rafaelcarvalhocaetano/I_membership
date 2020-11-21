@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 
 import './assets/styles/reset.scss';
 
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
 import App from './App';
 
 ReactDOM.render(
