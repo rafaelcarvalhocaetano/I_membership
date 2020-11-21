@@ -1,5 +1,5 @@
 import React from 'react';
-import TableCustomer from '../components/table/table';
+import TableCustomer from '../../components/table/table';
 
 import './overview.scss';
 

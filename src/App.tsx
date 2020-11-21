@@ -4,11 +4,11 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './app.scss';
 
 import Routers from './router/Route';
-import Overview from './pages/Overview';
-import Cloud from './pages/Cloud';
 import Header from './components/header/header';
 import Modal from './components/modal/Modal';
 import UserProvider from './context/UseContext';
+import Overview from './pages/overview';
+import Cloud from './pages/clould';
 
 const App = () => {
 
