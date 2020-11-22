@@ -28,6 +28,7 @@ const Event = () => {
 
         <div className="type-event">
           <Dropdown />
+          <Dropdown />
         </div>
 
         <div className="tag-color">
