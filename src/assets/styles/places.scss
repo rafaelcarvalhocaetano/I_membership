@@ -19,11 +19,12 @@
   }
 }
 
+
 %color-checked {
   &.red {
     background-color: var(--ered);
     &::before {
-      border: 2px solid var(--ered);
+      border: 3px solid var(--ered);
       opacity: 0.5;
       box-shadow: 0 0 2px var(--ered);
     }
@@ -31,7 +32,7 @@
   &.orange {
     background-color: var(--eorange);
     &::before {
-      border: 2px solid var(--eorange);
+      border: 3px solid var(--eorange);
       opacity: 0.5;
       box-shadow: 0 0 2px var(--eorange);
     }
@@ -39,7 +40,7 @@
   &.yellow {
     background-color: var(--eyellow);
     &::before {
-      border: 2px solid var(--eyellow);
+      border: 3px solid var(--eyellow);
       opacity: 0.5;
       box-shadow: 0 0 2px var(--eyellow);
     }
@@ -47,7 +48,7 @@
   &.green {
     background-color: var(--egreen);
     &::before {
-      border: 2px solid var(--egreen);
+      border: 3px solid var(--egreen);
       opacity: 0.5;
       box-shadow: 0 0 2px var(--egreen);
     }
@@ -55,7 +56,7 @@
   &.blue {
     background-color: var(--eblue);
     &::before {
-      border: 2px solid var(--eblue);
+      border: 3px solid var(--eblue);
       opacity: 0.5;
       box-shadow: 0 0 2px var(--eblue);
     }
@@ -63,7 +64,7 @@
   &.purple {
     background-color: var(--epurple);
     &::before {
-      border: 2px solid var(--epurple);
+      border: 3px solid var(--epurple);
       opacity: 0.5;
       box-shadow: 0 0 2px var(--epurple);
     }

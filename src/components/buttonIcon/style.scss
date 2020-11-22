@@ -1,8 +1,8 @@
 @import '../../assets/styles/places';
 
 .btn-icon-event {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
   @extend %colors;
   position: relative;
@@ -18,17 +18,24 @@
   }
   &::before {
     content: '';
+    padding: 1px;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-49.2%, -52%);
     transition: all 400ms ease-in-out 0s;
+    border-color: #FFF;
   }
   
   &.border-effect {
    @extend %color-checked;
+  }
+
+  &.wth {
+    width: 5px;
+    height: 12px;
   }
 }

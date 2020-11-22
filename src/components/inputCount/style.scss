@@ -1,0 +1,39 @@
+.input-count {
+  border-bottom: 1px solid var(--eborder);
+  display: flex;
+  padding: 5px 0;
+  input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--etext-default);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-left: 5px;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: var(--etext);
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  .count {
+    width: 30px;
+    height: 20px;
+    background-color: var(--etext);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      color: var(--default);
+      font-weight: bold;
+      font-size: 12px;
+    }
+  }
+}

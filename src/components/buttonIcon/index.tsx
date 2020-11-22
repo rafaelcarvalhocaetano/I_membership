@@ -15,7 +15,7 @@ const ButtonAIcon = (props: any) => {
   }
 
   return (
-    <button className={`btn btn-icon-event ${getColor()} ${props.checked ? 'border-effect': null }`} onClick={() => props.handlerColor(props.item)}>
+    <button className={`btn btn-icon-event ${getColor()} ${props.checked ? 'border-effect': null } ${props.header ? 'wth' : null}`} onClick={() => props.handlerColor(props.item)}>
       {
         props.checked && (<i className="fas fa-check mf"></i>)
       }
