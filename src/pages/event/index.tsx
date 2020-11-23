@@ -25,7 +25,7 @@ const Event = () => {
           <div className="sub-header-actions">
             <label htmlFor="data-file">
               {
-                file.length ? file[0].name : 'Create an Event'
+                file.length ? file[0].name.replace(/.jpeg|.pdf|.png|.jpg|.mp4|.mp3|.txt/g, '') : 'Create an Event'
               }
               <input type="file" id="data-file" name="data-file" hidden onChange={(e: any) => setFile(e.target.files)} />
               <i className="far fa-copy"></i>
