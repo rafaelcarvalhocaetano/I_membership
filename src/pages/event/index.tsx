@@ -1,7 +1,8 @@
 import React from 'react'
+
 import ButtonAction from '../../components/buttonAction';
 import ButtonAIcon from '../../components/buttonIcon';
-import Dropdown from '../../components/dropdown';
+import DropdownHours from '../../components/dropdown-hours';
 import EventColor from '../../components/event-colors';
 import InputCount from '../../components/inputCount';
 
@@ -27,8 +28,8 @@ const Event = () => {
         </div>
 
         <div className="type-event">
-          <Dropdown />
-          <Dropdown />
+          <DropdownHours />
+          <DropdownHours />
         </div>
 
         <div className="tag-color">

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+
 import { hours } from '../../constants/hours';
+
 import './style.scss';
 
-const Dropdown = () => {
+const DropdownHours = () => {
 
   const container: any = React.createRef();
   const [rotate, setRotate] = useState(false);
@@ -49,4 +51,4 @@ const Dropdown = () => {
   );
 }
 
-export default Dropdown;
+export default DropdownHours;
