@@ -29,7 +29,7 @@ const DropdownHours = () => {
 
   return (
     <div className="dropdown-container" ref={container}>
-      <button className={`btn btn-dropdown ${rotate ? 'fcs' : null }`} onClick={() => handleClick()}>
+      <button className={`btn btn-dropdown`} onClick={() => handleClick()}>
         <span>{ timeHours }</span>
         <i className={`fas fa-chevron-down ${ rotate ? 'rotate' : null }`}></i>
       </button>

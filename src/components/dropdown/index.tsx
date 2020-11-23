@@ -21,7 +21,7 @@ const Dropdown = ({ icon, children, turn, label }: any) => {
   
   return (
     <div className="dropdown-container" ref={container}>
-      <button className={`btn btn-dropdown ${rotate ? 'fcs' : null }`} onClick={() => handleClick()}>
+      <button className={`btn btn-dropdown`} onClick={() => handleClick()}>
         <span>{ data }</span>
         <i className={`${icon} ${ rotate && turn ? 'rotate' : null } icn-clr`}></i>
       </button>

@@ -62,7 +62,7 @@ const Event = () => {
 
       <div className="card-footer">
         <div className="drop-advanced">
-        <Dropdown icon='fas fa-chevron-down' label='Advanced'>
+        <Dropdown label='Advanced' >
         </Dropdown>
         </div>
         <div className="action-footer-card">
