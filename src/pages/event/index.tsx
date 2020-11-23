@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import ButtonAction from '../../components/buttonAction';
 import ButtonAIcon from '../../components/buttonIcon';
@@ -11,6 +11,9 @@ import InputCount from '../../components/inputCount';
 import './style.scss';
 
 const Event = () => {
+
+  const [file, setFile] = useState<any>('');
+
   return (
     <div className="card-event">
 
@@ -20,15 +23,19 @@ const Event = () => {
           <ButtonAIcon color={'yellow'} header/>
           <ButtonAIcon color={'green'} header />
           <div className="sub-header-actions">
-            <h1>Create an Event</h1>
-            <i className="far fa-copy"></i>
+            <label htmlFor="data-file">
+              {
+                file.length ? file[0].name : 'Create an Event'
+              }
+              <input type="file" id="data-file" name="data-file" hidden onChange={(e: any) => setFile(e.target.files)} />
+              <i className="far fa-copy"></i>
+            </label>
           </div>
         </div>
 
         <div className="form-group-event">
           <InputCount />
         </div>
-
 
         <div className="toogle-type">
           <ButtonToogle />
@@ -40,7 +47,7 @@ const Event = () => {
         </div>
 
         <div className="calendar">
-          <label htmlFor="date">Date</label>
+          <label className="data-label">Date</label>
           <Dropdown icon='far fa-calendar-alt' label='Selecione'>
 
           </Dropdown>
@@ -54,9 +61,14 @@ const Event = () => {
       </div>
 
       <div className="card-footer">
-        <p>Advenced</p>
+        <div className="drop-advanced">
+        <Dropdown icon='fas fa-chevron-down' label='Advanced'>
+        </Dropdown>
+        </div>
         <div className="action-footer-card">
+          <div className="separator">
           <ButtonAction title="Cancel" green />
+          </div>
           <ButtonAction title="Create" blue />
         </div>
 
