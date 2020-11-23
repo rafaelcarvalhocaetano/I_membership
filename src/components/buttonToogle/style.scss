@@ -1,0 +1,27 @@
+@import '../../assets/styles/mixis.scss';
+
+.btn-toggle-container {
+  width: 200px;
+  height: 35px;
+  border-radius: 20px;
+  background-color: var(--efooter-card);
+  display: flex;
+  justify-content: space-between;
+  padding: 2px;
+  position: relative;
+  .btn-event-select {
+    color: var(--etxt);
+    font-weight: bold;
+    margin: 0 20px;
+    z-index: 1;
+    &:nth-child(2) {
+      padding-left: 14px;
+    }
+  }
+  &.btn-select-left {
+    @include toggleOption(1, 0);
+  }
+  &.btn-select-rigth {
+    @include toggleOption(2, 104%);
+  } 
+}

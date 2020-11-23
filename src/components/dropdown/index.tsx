@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { hours } from '../../constants/hours';
 import './style.scss';
 
-const Dropdown = () => {
+const Dropdown = ({ icon, children, turn, label }: any) => {
 
   const container: any = React.createRef();
   const [rotate, setRotate] = useState(false);
-  const [timeHours, setTimeHours] = useState(hours[0]);
+  const [data, setData] = useState(label);
 
   const handleClick = () => setRotate(!rotate);
 
@@ -19,30 +18,17 @@ const Dropdown = () => {
       setRotate(false);
     }
   };
-
-  const getHours = (hours: string) => {
-    setRotate(false);
-    setTimeHours(hours);
-  }
-
+  
   return (
     <div className="dropdown-container" ref={container}>
       <button className={`btn btn-dropdown ${rotate ? 'fcs' : null }`} onClick={() => handleClick()}>
-        <span>{ timeHours }</span>
-        <i className={`fas fa-chevron-down ${ rotate ? 'rotate' : null }`}></i>
+        <span>{ data }</span>
+        <i className={`${icon} ${ rotate && turn ? 'rotate' : null } icn-clr`}></i>
       </button>
       {
-        rotate && 
+        rotate && children && 
         (
-          <ul className="list-dropdown">
-            {
-              hours.map((x: string, i: number) => (
-                <li className="item-dropdown" key={i}>
-                  <a className="action-dropdonw" onClick={() => getHours(x)}><span>{ x }</span></a>
-                </li>
-              ))
-            }
-          </ul>
+          <ul className="list-dropdown">{ children }</ul>
         )
       }
     </div>

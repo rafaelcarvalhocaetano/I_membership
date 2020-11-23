@@ -1,9 +1,13 @@
-%scroll {
-  &::-webkit-scrollbar {
-    width: 8px;
-  }      
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--text-header-table);
-    border-radius: 20px;
+@import './places';
+
+@mixin toggleOption($nb, $transX) {
+  .btn-event-select {
+    &:nth-child(#{$nb}) {
+      color: var(--etext-default);
+    }
+  }
+  &::before {
+    @extend %action-button;
+    transform: translateX($transX);
   }
 }

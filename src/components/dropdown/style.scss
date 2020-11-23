@@ -18,7 +18,7 @@
       letter-spacing: 1.5px;
       font-weight: 550;
     }
-    .fas {
+    .icn-clr {
       transition: all 400ms ease-in-out;
       color: var(--etxt);
       &.rotate {
@@ -71,9 +71,7 @@
             user-select: none;
           }
         }
-       
       }
-      
       &::-webkit-scrollbar {
         width: 0px;
       }

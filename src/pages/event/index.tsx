@@ -2,6 +2,8 @@ import React from 'react'
 
 import ButtonAction from '../../components/buttonAction';
 import ButtonAIcon from '../../components/buttonIcon';
+import ButtonToogle from '../../components/buttonToogle';
+import Dropdown from '../../components/dropdown';
 import DropdownHours from '../../components/dropdown-hours';
 import EventColor from '../../components/event-colors';
 import InputCount from '../../components/inputCount';
@@ -27,9 +29,9 @@ const Event = () => {
           <InputCount />
         </div>
 
-        <div className="type-event">
-          <DropdownHours />
-          <DropdownHours />
+
+        <div className="toogle-type">
+          <ButtonToogle />
         </div>
 
         <div className="tag-color">
@@ -39,16 +41,14 @@ const Event = () => {
 
         <div className="calendar">
           <label htmlFor="date">Date</label>
-          <input type="date" name="date-calendar" id="date" />
+          <Dropdown icon='far fa-calendar-alt' label='Selecione'>
+
+          </Dropdown>
         </div>
 
-        <div className="dropdown-hours-start">
-          <span>19:00</span>
-          <img src="#" alt="Arrow" />
-        </div>
-        <div className="dropdown-hours-end">
-          <span>19:00</span>
-          <img src="#" alt="Arrow" />
+        <div className="type-event">
+          <DropdownHours />
+          <DropdownHours />
         </div>
 
       </div>
