@@ -62,7 +62,8 @@ const Event = () => {
 
       <div className="card-footer">
         <div className="drop-advanced">
-        <Dropdown label='Advanced' >
+        <Dropdown label='Advanced'>
+          <h1>Teste</h1>
         </Dropdown>
         </div>
         <div className="action-footer-card">
