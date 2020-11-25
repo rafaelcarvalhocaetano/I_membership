@@ -26,7 +26,7 @@ const Dropdown = ({ icon, children, turn, label }: any) => {
         <i className={`${icon} ${ rotate && turn ? 'rotate' : null } icn-clr`}></i>
       </button>
       {
-        rotate && children && 
+        rotate && children &&
         (
           <ul className="list-dropdown">{ children }</ul>
         )
