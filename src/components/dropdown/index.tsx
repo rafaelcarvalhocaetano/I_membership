@@ -28,7 +28,7 @@ const Dropdown = ({ icon, children, turn, label }: any) => {
       {
         rotate && children &&
         (
-          <ul className="list-dropdown">{ children }</ul>
+          <ul className="list-dropdown" onClick={() => setRotate(false)}>{ children }</ul>
         )
       }
     </div>

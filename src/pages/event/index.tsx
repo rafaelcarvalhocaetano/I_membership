@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import ButtonAction from '../../components/buttonAction';
 import ButtonAIcon from '../../components/buttonIcon';
@@ -13,6 +13,15 @@ import './style.scss';
 const Event = () => {
 
   const [file, setFile] = useState<any>('');
+  const [adv, setAdv] = useState('');
+
+  useEffect(() => {
+    setSelect('Advanced')
+  })
+
+  const setSelect = (data: string) => {
+    setAdv(data)
+  }
 
   return (
     <div className="card-event">
@@ -62,16 +71,15 @@ const Event = () => {
 
       <div className="card-footer">
         <div className="drop-advanced">
-        <Dropdown label='Advanced'>
-          <h1>Teste</h1>
+        <Dropdown label={adv}>
           <ul className="list-adv">
-            <li className="item-adv">
-              <a className="active-adv">A</a>
+            <li className="item-adv" onClick={() => setSelect('A')}>
+              <a className="active-adv" >A</a>
             </li>
-            <li className="item-adv">
+            <li className="item-adv" onClick={() => setSelect('B')}>
               <a className="active-adv">B</a>
             </li>
-            <li className="item-adv">
+            <li className="item-adv" onClick={() => setSelect('C')}>
               <a className="active-adv">C</a>
             </li>
           </ul>
