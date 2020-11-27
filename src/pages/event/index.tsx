@@ -49,7 +49,7 @@ const Event = () => {
         <div className="calendar">
           <label className="data-label">Date</label>
           <Dropdown icon='far fa-calendar-alt' label='Selecione'>
-
+            <h1>Teste</h1>
           </Dropdown>
         </div>
 
@@ -72,10 +72,7 @@ const Event = () => {
           </div>
           <ButtonAction title="Create" blue />
         </div>
-
       </div>
-
-
     </div>
   )
 }
