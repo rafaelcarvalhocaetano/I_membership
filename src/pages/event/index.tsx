@@ -64,6 +64,17 @@ const Event = () => {
         <div className="drop-advanced">
         <Dropdown label='Advanced'>
           <h1>Teste</h1>
+          <ul className="list-adv">
+            <li className="item-adv">
+              <a className="active-adv">A</a>
+            </li>
+            <li className="item-adv">
+              <a className="active-adv">B</a>
+            </li>
+            <li className="item-adv">
+              <a className="active-adv">C</a>
+            </li>
+          </ul>
         </Dropdown>
         </div>
         <div className="action-footer-card">
