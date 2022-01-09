@@ -1,21 +1,20 @@
-## USE
+## FRONT_END
+
  - 1° npm i
  - 2° npm start
  
-## URL
- - https://i-membership.herokuapp.com/
- 
-## Back-end
- - https://github.com/rafaelcarvalhocaetano/i-membership-backend
- 
- # i-membershp-backend
 
-- https://imbackend.herokuapp.com/
-
-### - Rotas
+ 
+## BACK_END:
+ 
+- Rotas
  - /user ``` get with filters and pagination ```
  - /user/all ``` get  ```
  - /user/:id ``` get  ```
  - /user     ``` post  ```
  - /user/:id ``` put  ```
  - /user/:id ``` delete  ```
+
+## urls
+ - https://i-membership.herokuapp.com/
+ - https://imbackend.herokuapp.com/
